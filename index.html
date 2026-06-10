@@ -2,36 +2,44 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>용산JY골프아마데미 </title>
+
+    <meta property="og:title" content="용산JY골프아카데미">
+    <meta property="og:description" content="실시간 자리 예약 및 프리미엄 서비스를 경험해보세요.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?q=80&w=1200">
+    <meta property="og:url" content="https://yjkang0240-byte.github.io/fastapi-golf-site/">
+
+    <title>진짜골프장이름</title>
+
     <style>
-        body { font-family: 'Malgun Gothic', sans-serif; text-align: center; background-color: #f4f9f4; color: #333; }
+        body { font-family: 'Malgun Gothic', sans-serif; text-align: center; background-color: #f4f9f4; color: #333; margin: 0; padding: 20px; }
         .hero-img { width: 100%; max-width: 800px; height: auto; border-radius: 10px; margin: 20px 0; }
-        .btn { background-color: #2e7d32; color: white; padding: 12px 24px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; }
+        .btn { background-color: #2e7d32; color: white; padding: 12px 24px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; width: 85%; }
         .btn:hover { background-color: #1b5e20; }
+        .reserve-box { background-color: white; max-width: 400px; margin: 20px auto; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); text-align: left; }
+        .reserve-box h3 { text-align: center; margin-top: 0; }
+        input, select { width: 100%; padding: 10px; margin: 10px 0 20px 0; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
     </style>
 </head>
 <body>
 
-<h1>⛳ 용산JY골프아카데미에 오신 것을 환영합니다</h1>
-<p>도심 속에서 즐기는 최고의 골프 레슨과 프리미엄 서비스를 경험해보세요.</p>
+<h1>⛳ 진짜골프장이름에 오신 것을 환영합니다</h1>
+<p>도심 속에서 즐기는 최고의 필드와 프리미엄 서비스를 경험해보세요.</p>
 
 <img src="https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?q=80&w=1200" alt="골프장 전경" class="hero-img">
 
-<br>
-<!--<button class="btn" onclick="alert('실시간 예약 시스템 준비 중입니다!')">실시간 자리 예약하기</button>-->
-<div style="background-color: white; max-width: 400px; margin: 20px auto; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+<div class="reserve-box">
     <h3>📅 실시간 자리 예약</h3>
 
-    <label for="reserveDate">예약 날짜:</label><br>
-    <input type="date" id="reserveDate" style="width: 80%; padding: 8px; margin: 10px 0;"><br>
+    <label for="reserveDate"><b>예약 날짜 선택</b></label>
+    <input type="date" id="reserveDate">
 
-    <label for="reserveTime">예약 시간:</label><br>
-    <select id="reserveTime" style="width: 85%; padding: 8px; margin: 10px 0;">
+    <label for="reserveTime"><b>예약 시간 선택</b></label>
+    <select id="reserveTime">
         <option value="09:00">09:00 (오전)</option>
         <option value="12:00">12:00 (오후)</option>
         <option value="15:00">15:00 (오후)</option>
         <option value="19:00">19:00 (저녁)</option>
-    </select><br><br>
+    </select>
 
     <button class="btn" onclick="submitReservation()">실시간 자리 예약하기</button>
 </div>
@@ -45,8 +53,9 @@
             alert('날짜를 선택해 주세요!');
             return;
         }
-        alert(`${date} ${time} 시로 자리가 예약되었습니다!`);
+        alert(`${date} ${time} 시로 자리가 성공적으로 예약되었습니다!`);
     }
 </script>
+
 </body>
-</html>lt --port 8000
+</html>
